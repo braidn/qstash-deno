@@ -19,5 +19,5 @@ serve(async (req: Request) => {
     return new Response("Invalid signature", { status: 401 });
   }
 
-  new Response("OK", { status: 200 });
+  return new Response("OK", { status: 200 });
 });
