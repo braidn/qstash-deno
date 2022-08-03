@@ -19,5 +19,6 @@ serve(async (req: Request) => {
     return new Response("Invalid signature", { status: 401 });
   }
 
+  console.log("Message Received: ", await req.text());
   return new Response("OK", { status: 200 });
 });
